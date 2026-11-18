@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rag-pwa-app
+    runtime: python
+    plan: standard          # 嵌入模型 + torch 需要較多記憶體(512 MB 方案可能 OOM)
+    buildCommand: pip install -r requirements.txt && python app.py --download
+    startCommand: python app.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: GROQ_API_KEY     # 選填:設定後所有訪客都會共用此 Key,公開部署建議留空
+        sync: false

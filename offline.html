@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2d6a4f">
+  <title>目前離線</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+      font-family:"Noto Sans TC",system-ui,sans-serif;color:#fff;text-align:center;padding:24px;
+      background:linear-gradient(135deg,#40916c,#2d6a4f 55%,#1b4332)}
+    .box{max-width:360px}
+    h1{font-size:1.6rem;margin:0 0 8px}
+    p{opacity:.9;line-height:1.6;margin:0 0 20px}
+    button{border:0;border-radius:999px;padding:12px 28px;font-size:1rem;font-weight:600;
+      background:#fff;color:#2d6a4f;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div style="font-size:3rem">📡</div>
+    <h1>目前沒有網路連線</h1>
+    <p>文件問答需要連線到伺服器與 Groq API。請確認網路後再試一次。</p>
+    <button onclick="location.reload()">重新整理</button>
+  </div>
+</body>
+</html>
